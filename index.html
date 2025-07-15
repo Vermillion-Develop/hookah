@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/png" href="Images/logo.png"><!--Иконка для сайта-->
+	<title>Tabaсco House</title>
+</head>
+<body>
+
+<!------------------------------------------------------------------------------------------------Стили---------------------------------------------------------------------------------------------------------------------------->
+	<style type="text/css">
+
+
+		/*Настройки начальные у всех элементов*/
+			*{
+				/*border: 1px green solid	;*/
+				margin: 0px;
+				background-repeat: no-repeat;
+				background-size: cover ;
+			}
+
+
+		/*Бэк всего сайта*/
+			html{
+				background-image: url(Images/fon.jpg);
+			}
+
+
+		/*Настройка левой менюшки по размерам*/
+			aside{
+				width: 25%;
+				margin-top: 100px;
+				margin-left: 10%;
+			}
+
+
+		/*Настройка хедера*/
+			.Navigation{
+				display: flex;
+				height: 100px;
+				justify-content: center;
+				align-items: center;
+				background-color: #4f3535;
+			}
+
+			.Navigation a{
+				margin-left:auto;
+				margin-right: auto;
+				padding: 36px;
+				font-size: 22px;
+				text-decoration: none;
+				color: whitesmoke;
+				transition: 0.2s;
+				width: 13%;
+                text-align: center;
+			}
+
+			.Navigation a:hover{
+				background-color: #694a4a;
+				transition: 0.2s;
+			}
+
+
+		/*Общие настройки слайдов кроме Primary*/
+			.Menu_News, .Menu_O_Nas, .Licenziya, .Questions{
+
+				background-repeat: no-repeat;
+				background-size: cover;
+				position: absolute;
+				display: none;
+				width: 40%;
+				height: 600px;
+				font-size: 24px;
+				color: whitesmoke;
+				text-align: center;
+				border-radius: 5%;
+				margin-right: auto;
+				margin-left: 50%;
+				transition: 0.5s ease;
+				overflow: hidden;
+				margin-top: 50px;
+			}
+
+
+		/*Начальный слайд заглушка*/
+			.Primary{
+				position: absolute;
+				display: block;
+				width: 40%;
+				height: 600px;
+				font-size: 24px;
+				color: whitesmoke;
+				text-align: center;
+				border-radius: 5%;
+				margin-right: auto;
+				margin-left: 50%;
+				transition: 0.5s ease;
+				overflow: hidden;
+				margin-top: 50px;
+			}
+
+
+		/*Изображения слайдов*/
+			.Menu_News{
+				background: url(Images/Brusko_Slider.jpg);
+			}
+
+			.Menu_O_Nas{
+				background: url(Images/BlackBurn_Slider.jpg);
+			}
+
+			.Licenziya{
+				background: url(Images/MustHave_Slider.jpg);
+			}
+
+			.Questions{
+				background: url(Images/Elemental.png);
+			}
+
+			.Primary{
+				background: url(Images/primary.jpg);
+			}
+
+
+		/*Настройки левой менюшки*/
+			.Menu, .Menu button{
+				display: flex;
+				flex-direction: column;
+				align-items: stretch;
+				gap: 50px;
+				font-size: 30px;
+				font-family: Times New Roman;
+
+
+			}
+
+
+			.Menu p, .Menu button{
+				padding: 25px;
+				transition: 0.5s  ease;
+				background-color: whitesmoke;
+				text-align: center;
+				border: solid black	2px;
+			}
+
+
+			.Menu p:hover, .Menu button:hover{
+				transform: translate(10px);
+				transition: 0.5s ease;
+				background-color:  #694a4a;
+				color: whitesmoke;
+				border-radius: 50%;
+				cursor: default;
+			}
+
+			.Menu button:hover{
+				cursor: pointer;
+			}
+
+
+		/*Настройки бэка слайдов, размера текста*/
+			.Menu_News h2, .Menu_O_Nas h2, .Licenziya h2, .Questions h2, .Primary h2{
+				font-size: 38px;
+				font-weight:bold;
+				background:linear-gradient(rgba(50, 13, 13, 0.8),rgba(20, 13, 13,0.9));
+			}
+
+			.Menu_News p, .Menu_O_Nas p, .Licenziya .Tegs, .Questions ul, .Primary p{
+				font-size: 30px;
+				font-weight: bold;
+				background:linear-gradient(rgba(50, 13, 13, 0.8),rgba(20, 13, 13,0.9));
+			
+
+			}
+
+			.Licenziya .Tegs li{
+				margin-top: 1px;
+			}
+
+			.Licenziya .Tegs, .Menu_News .new_back, .Menu_O_Nas .new_back, .Questions .new_back{
+				background:linear-gradient(rgba(50, 13, 13, 0.8),rgba(20, 13, 13,0.9));
+				width: auto;
+	   			height: auto;
+			}
+
+
+		/*Настройки формы*/
+			.okno{
+				width: 50%;
+				height: 600px;
+				position: absolute;
+				margin-left: auto;
+				margin-right: auto;
+				left: 0;
+				right: 0;
+				top: 20%;
+				display: none;
+				flex-direction: column;
+	   	 		justify-content: flex-start;
+	   	 		font-size: 20px;
+	   	 		color: #d1cbcb;
+	   	 		background-color: #d1cbcb;
+			}
+
+			textarea{
+				resize: none;
+				width: 50%;
+				height: 50%;
+				font-size: 18px;
+
+			}
+
+
+			.okno_button{
+				display: flex;
+				align-content: center;
+			    flex-wrap: wrap;
+			    justify-content: flex-end;
+			    gap: 10px;
+
+			}
+
+			.okno_button button{
+				width: 15%;
+				height: 150%;
+			}
+
+			label, input, select{
+				width: 25%;
+			}
+
+			legend{
+				font-size: 24px;
+				text-align: center;
+				transform: translateY(14px);
+				color: #d1cbcb;
+
+			}
+
+			fieldset{
+				background: url(Images/form_back.jpg);
+				background-size: cover;
+		    	background-blend-mode: luminosity;
+			}
+	
+	</style>
+
+
+
+
+<div class="telo">
+
+
+	<header>
+		<div class="Navigation">
+			<a href="hookahs.html">Кальяны</a>
+			<a href="tabac.html">Табак для кальяна</a>
+			<a href="Jevatel_Tobacco.html">Жевательный табак</a>
+			<a href="Ugol.html">Уголь</a>
+			<a href="Vapes.html">Электронные сигареты</a>
+			<a href="Acess.html">Аксессуары</a>
+			</div>
+		</header>
+
+
+<main>
+
+	<div class="Menu_News">
+		<div class="new_back">
+			<h2>
+		Новости Tabacco House
+		</h2>
+
+		<p>В нашем кальянном магазине новые поступления!
+			Мы рады представить уникальные ароматы табака и стильные аксессуары для вашего идеального отдыха. 
+			Не пропустите специальные предложения и акции, которые действуют только в этом месяце!
+			</p></div>
+		
+		
+	</div>
+	<div class="Menu_O_Nas">
+		<div class="new_back">
+		<h2>О нас
+			</h2>
+
+		<p>Мы заботимся о качестве и предлагаем только проверенные бренды, чтобы каждый ваш вечер с
+			нами был особенным. В Tabacco House мы не просто продаём
+			кальяны — мы создаем атмосферу уюта, тепла и дружеских встреч. Приходите, откройте для себя
+			лучшие вкусы и окунитесь в мир наслаждения с
+			Tabacco House!
+			</p>
+		</div>
+	</div>
+
+	<div class="Licenziya">
+		<h2>Лицензия
+		</h2>
+		<div class = "Tegs">
+			<p>Добро пожаловать в Tabacco House! Мы гордимся тем, что предоставляем нашим клиентам только качественные и сертифицированные продукты. Наша лицензия на продажу табачных изделий подтверждает, что мы соблюдаем все законодательные нормы и стандарты безопасности.
+				<h2>Почему это важно для вас:</h2>
+				<ul>
+					<li>Качество и безопасность: Все наши товары проходят строгую проверку и соответствуют высоким стандартам.</li>
+					<li>Ответственное потребление: Мы поддерживаем осознанный подход к курению и предлагаем информацию о наших продуктах.</li>
+					<li>Доверие и прозрачность: Наша лицензия — это гарантия того, что вы покупаете у надежного и законопослушного продавца.
+		</li>
+		</ul>
+			</p>
+			</div>
+		
+	</div>
+	<div class = "Questions">
+		<div class="new_back">
+		<h2>
+			Частые вопросы
+		</h2>
+<p>
+	<ul>
+		<li>Какие виды табака вы предлагаете? В Tabacco
+	House мы предлагаем широкий ассортимент
+	табаков различных брендов и вкусов. У нас есть
+	как классические, так и уникальные смеси, чтобы удовлетворить любые предпочтения.</li>
+	<li>Как выбрать кальян? Если вы новичок, мы рекомендуем начать с простого кальяна. Наши консультанты всегда готовы помочь вам выбрать идеальную модель, учитывая ваши предпочтения
+	и бюджет.</li>
+	</ul>
+	</p>
+		</div>
+
+	</div>
+	<div class="Primary">
+		<h2>Добро пожаловать в Tabbaco House!</h2>
+
+		<p>Ваш лучший выбор для качественных кальянов и табака. Погрузитесь в атмосферу уюта и наслаждения с нашим широким ассортиментом эксклюзивных вкусов и аксессуаров. Откройте для себя искусство кальяна вместе с нами — качество, стиль и гармония в каждой затяжке. Tabacco House — Ваш кальянный эксперт!
+		</p>
+
+	</div>
+</div>
+
+	<!--Форма-->
+		<div class="form_open">
+		<form action="#" class="form-container">
+			<fieldset class="okno">  
+		<legend>Задать вопрос</legend>
+		<label>Категория вопроса</label>
+		<select >
+			<option disabled selected>Выбрать</option>
+			<option>Табак для кальяна</option>
+			<option>Способы оплаты</option>
+			<option>Доставка</option>
+			<option>Гарантия</option>
+			<option>Производитель</option>
+			<option>Техническая поддержка</option>
+			<option>Обратная связь</option>
+		</select>
+		<br>
+		<label>Ваши контактные данные</label>
+		<br>
+		<label>Имя</label>
+		<input type="text" >
+		<label>Телефон</label>
+		<input type="number">
+		<br>
+			<label>Введите ваш вопрос</label>
+		<br>
+		<textarea placeholder="Введите ваш вопрос здесь"></textarea>
+
+		<div class="okno_button">
+		<button onclick="closeForm()">Отправить</button>
+		<button onclick="closeForm()">Назад</button>
+			</div>
+	
+
+		</fieldset>
+
+		
+			
+
+		</form>
+
+	</main>
+
+
+<!--Левая менюшка параграфов и кнопки с наведением-->
+	<aside class="knopki">
+	<div class="Menu">
+		<p class="News">Новости</p>
+		<p class="onas">О нас</p>
+		<p class = "Licen">Лицензия</p>
+		<p class="Quest">Частые вопросы</p>
+		<button class="open-button" onclick="openForm()">Задать вопрос</button>
+		</div>
+	</aside>
+	</div>
+
+
+<script type="text/javascript">
+		function openForm() {
+		    var elements = document.getElementsByClassName("okno");
+		    var bodyda  =  document.getElementsByClassName("telo");
+		    var knopki = document.getElementsByClassName("knopki");
+
+			    if (elements.length > 0) {
+			    	bodyda[0].style.display = "none"
+			    	knopki[0].style.display = "none";
+			        elements[0].style.display = "flex"; 
+
+			     
+			    }
+			}
+
+		function closeForm() {
+			var elements_2 = document.getElementsByClassName("okno");
+		    var bodyda_2  =  document.getElementsByClassName("telo");
+		    var knopki_2 = document.getElementsByClassName("knopki");
+		    if(elements_2.length>0)
+		    {
+		    		bodyda_2[0].style.display = "block"
+			    	knopki_2[0].style.display = "flex";
+			        elements_2[0].style.display = "none"; 
+
+		    }
+
+			}	
+
+
+	/*Массив таргета*/
+	const targets = [
+	    document.querySelector('.News'),
+	    document.querySelector('.onas'),
+	    document.querySelector('.Licen'),
+	    document.querySelector('.Quest')
+	];
+
+	/*Массив со слайдами*/
+	const contents = [
+	    document.querySelector('.Menu_News'),
+	    document.querySelector('.Menu_O_Nas'),
+	    document.querySelector('.Licenziya'),
+	    document.querySelector('.Questions'),
+	    document.querySelector('.Primary')
+	];
+	/*Метод форыч*/
+	targets.forEach((target, index) => {
+	    target.addEventListener('mouseenter', () => {
+	        contents.forEach(content => content.style.display = 'none');
+	        contents[index].style.display = 'block';
+	    });
+	});
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="Images/logo.png"><!--Иконка для сайта-->
+    <title>Электронные сигареты</title>
+    <style>
+        
+        /*Настройки начальные у всех элементов*/
+			*{
+/*				border: 1px green solid	;*/
+				margin: 0px;
+/*                width: 100%;*/
+                overflow-x: hidden ;
+		
+			}
+
+
+        /*Настройка хедера*/
+			.Navigation{
+				display: flex;
+				height: 100px;
+				justify-content: center;
+				align-items: center;
+				background-color: #4f3535;
+			}
+
+			.Navigation a{
+				margin-left:auto;
+				margin-right: auto;
+				padding: 36px;
+				font-size: 22px;
+				text-decoration: none;
+				color: whitesmoke;
+				transition: 0.2s;
+                width: 13%;
+                text-align: center;
+			}
+
+			.Navigation a:hover{
+				background-color: #694a4a;
+				transition: 0.2s;
+			}
+
+            main{
+                background: url(Images/fon_2.jpg);
+                color: #eee;
+                line-height: 1.4;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+
+            }
+
+            html{
+               background: #4f3535; 
+            }
+
+        /*Настройка таблиц*/
+
+            h1 {
+                
+                color: #f39c12;
+                margin-bottom: 3px;
+                text-indent: 120px;
+                font-weight: 400;
+            }
+            h2 {
+                color: #e67e22;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                font-size: 24px;
+                text-indent: 120px;
+            }
+
+            table{
+                width: 85%;
+                border-collapse: collapse;
+                margin-left:auto;
+                margin-right:auto;
+                border-radius: 8px;
+                overflow: hidden;
+                
+            }
+
+            thead {
+                background: #694a4a;
+            }
+
+            thead th {
+                color: #fff;
+                text-align: left;
+            }
+            tbody tr {
+                background: #2c2c2c;
+                border-bottom: 1px solid #444;
+            }
+            tbody tr:hover {
+                background: #cf8c27be;
+                color: #121212;
+                cursor: default;
+            }
+            
+            thead th, tbody td {
+                padding: 6px 6px;
+                font-size: 18px;
+                width: 20%;
+
+            }
+            img{
+                height:100px;
+                width: auto;
+                border-radius: 6px;
+                object-fit: cover;
+                transition: 0.4s;
+            }
+            img:hover{
+                transform: scale(1.1);
+                transition: 0.4s;
+            }
+
+            .second-color{
+                width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+                background: rgba(26,24,24,0.95);
+                padding-bottom: 90px;
+
+            }
+
+            .price{
+                padding-left: 40px;
+
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+		<div class="Navigation">
+			<a href="index.html">Главная</a>
+			<a href="hookahs.html">Кальяны</a>
+            <a href="tabac.html">Табак для кальяна</a>
+			<a href="Jevatel_Tobacco.html">Жевательный табак</a>
+			<a href="Ugol.html">Уголь</a>
+			
+			<a href="Acess.html">Аксессуары</a>
+		</div>
+	</header>
+    <main>
+        <div class="second-color">
+        <h1>Tabacco House</h1>
+        <h2>Вейпы Voopoo</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Картинка</th>
+                    <th>Модель</th>
+                    <th>Мощность</th>
+                    <th>Объем батареи</th>
+                    <th>Примерная цена, ₽</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img  src="Images/DragX.jpg" alt="Шиша"></td>
+                    <td>Drag X Plus</td>
+                    <td>До 100 вт</td>
+                    <td>2550 мАч</td>
+                    <td class="price">3000 - 4500</td>
+                </tr>
+                <tr>
+                    <td><img  src="Images/DragS.jpg" alt="Шиша"></td>
+                    <td>Drag S</td>
+                    <td>До 60 вт</td>
+                    <td>2600 мАч</td>
+                    <td class="price">2000 - 3500</td>
+                </tr>
+                <tr>
+                    <td><img src="Images/VinciX.jpg" alt="Шиша"></td>
+                    <td>Vinci X</td>
+                    <td>До 70 вт</td>
+                    <td>1500 мАч</td>
+                    <td class="price">2900 - 3700</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <br>
+        <h2>Вейпы Geek Vape</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Картинка</th>
+                    <th>Модель</th>
+                    <th>Мощность</th>
+                    <th>Объем батареи</th>
+                    <th>Примерная цена, ₽</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img  src="Images/AegisX.jpg" alt="Шиша"></td>
+                    <td>Aegis X</td>
+                    <td>До 95 вт</td>
+                    <td>1300 мАч</td>
+                    <td class="price">2100 - 4500</td>
+                </tr>
+                <tr>
+                    <td><img  src="Images/AegisL.jpg" alt="Шиша"></td>
+                    <td>Aegis Legend</td>
+                    <td>До 80 вт</td>
+                    <td>650 мАч</td>
+                    <td class="price">1400 - 2900</td>
+                </tr>
+                <tr>
+                    <td><img src="Images/Zeus.jpg" alt="Шиша"></td>
+                    <td>Zeus Sub Ohm Tank</td>
+                    <td>До 50 вт</td>
+                    <td>800 мАч</td>
+                    <td class="price">1590 - 3200</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h2>Вейпы Vaporesso</h2>
+        <table class="table-last">
+            <thead>
+                <tr>
+                    <th>Картинка</th>
+                    <th>Модель</th>
+                    <th>Мощность</th>
+                    <th>Объем батареи</th>
+                    <th>Примерная цена, ₽</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img  src="Images/Luxo.jpg" alt="Luxo"></td>
+                    <td>Luxe PM40</td>
+                    <td>До 75 вт</td>
+                    <td>1550 мАч</td>
+                    <td class="price">1200 - 4500</td>
+                </tr>
+                <tr>
+                    <td><img  src="Images/XROS.jpg" alt="XROS"></td>
+                    <td>XROS</td>
+                    <td>До 65 вт</td>
+                    <td>2100 мАч</td>
+                    <td class="price">2000 - 3500</td>
+                </tr>
+                <tr>
+                    <td><img src="Images/Target.jpg" alt="Target"></td>
+                    <td>Target PM80</td>
+                    <td>До 70 вт</td>
+                    <td>1500 мАч</td>
+                    <td class="price">2900 - 3700</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <h2>Вейпы Lost Vape</h2>
+        <table class="table-last">
+            <thead>
+                <th>Картинка</th>
+                    <th>Модель</th>
+                    <th>Мощность</th>
+                    <th>Объем батареи</th>
+                    <th>Примерная цена, ₽</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img  src="Images/OrionQ.jpg" alt="OrionQ"></td>
+                    <td>Orion Q</td>
+                    <td>До 120 вт</td>
+                    <td>2550 мАч</td>
+                    <td class="price">3000 - 4500</td>
+                </tr>
+                <tr>
+                    <td><img  src="Images/Thelema.jpg" alt="Thelema"></td>
+                    <td>Thelema</td>
+                    <td>До 40 вт</td>
+                    <td>2600 мАч</td>
+                    <td class="price">2000 - 3500</td>
+                </tr>
+                <tr>
+                    <td><img src="Images/Centaurus.jpg" alt="Centaurus"></td>
+                    <td>Centaurus</td>
+                    <td>До 75 вт</td>
+                    <td>1500 мАч</td>
+                    <td class="price">2900 - 3700</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </main>
+</body>
+</html>

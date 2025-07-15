@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="Images/logo.png"><!--Иконка для сайта-->
+    <title>Аксессуары</title>
+    <style>
+        
+        /*Настройки начальные у всех элементов*/
+			*{
+/*				border: 1px green solid	;*/
+				margin: 0px;
+/*                width: 100%;*/
+                overflow-x: hidden ;
+		
+			}
+
+
+        /*Настройка хедера*/
+			.Navigation{
+				display: flex;
+				height: 100px;
+				justify-content: center;
+				align-items: center;
+				background-color: #4f3535;
+			}
+
+			.Navigation a{
+				margin-left:auto;
+				margin-right: auto;
+				padding: 36px;
+				font-size: 22px;
+				text-decoration: none;
+				color: whitesmoke;
+				transition: 0.2s;
+                width: 13%;
+                text-align: center;
+			}
+
+			.Navigation a:hover{
+				background-color: #694a4a;
+				transition: 0.2s;
+			}
+
+            main{
+                background: url(Images/fon_2.jpg);
+                color: #eee;
+                line-height: 1.4;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+
+            }
+
+            html{
+               background: #4f3535; 
+            }
+
+        /*Настройка таблиц*/
+
+            h1 {
+                
+                color: #f39c12;
+                margin-bottom: 3px;
+                text-indent: 120px;
+                font-weight: 400;
+            }
+            h2 {
+                color: #e67e22;
+                margin-top: 30px;
+                margin-bottom: 10px;
+                font-size: 24px;
+                text-indent: 120px;
+            }
+
+            table{
+                width: 85%;
+                border-collapse: collapse;
+                margin-left:auto;
+                margin-right:auto;
+                border-radius: 8px;
+                overflow: hidden;
+                
+            }
+
+            thead {
+                background: #694a4a;
+            }
+
+            thead th {
+                color: #fff;
+                text-align: left;
+            }
+            tbody tr {
+                background: #2c2c2c;
+                border-bottom: 1px solid #444;
+            }
+            tbody tr:hover {
+                background: #cf8c27be;
+                color: #121212;
+                cursor: default;
+            }
+            
+            thead th, tbody td {
+                padding: 6px 6px;
+                font-size: 18px;
+                width: 20%;
+
+            }
+            img{
+                height:100px;
+                width: auto;
+                border-radius: 6px;
+                object-fit: cover;
+                transition: 0.4s;
+            }
+            img:hover{
+                transform: scale(1.1);
+                transition: 0.4s;
+            }
+
+            .second-color{
+                width: 85%;
+                margin-left: auto;
+                margin-right: auto;
+                background: rgba(26,24,24,0.95);
+                padding-bottom: 90px;
+
+            }
+
+              .price{
+                padding-left: 40px;
+
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+		<div class="Navigation">
+			<a href="index.html">Главная</a>
+            <a href="hookahs.html">Кальяны</a>
+			<a href="tabac.html">Табак для кальяна</a>
+			<a href="Jevatel_Tobacco.html">Жевательный табак</a>
+            <a href="Ugol.html">Уголь</a>
+			<a href="Vapes.html">Электронные сигареты</a>
+			
+		</div>
+	</header>
+    <main>
+        <div class="second-color">
+        <h1>Tabacco House</h1>
+        <h2>Уголь для кальяна</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Картинка</th>
+                    <th>Аксессуар</th>
+                    <th>Назначение</th>
+                    <th>Материал</th>
+                    <th>Примерная цена, ₽</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img  src="Images/Call.png" alt="Каллауд"></td>
+                    <td>Каллауд</td>
+                    <td>Кальян</td>
+                    <td>Сталь/алюминий</td>
+                    <td class="price">700 - 1200</td>
+                </tr>
+                <tr>
+                    <td><img  src="Images/Chasha.jpg" alt="Чаша"></td>
+                    <td>Чаша</td>
+                    <td>Кальян</td>
+                    <td>Глина/керамика</td>
+                    <td class="price">550 - 1500</td>
+                </tr>
+                <tr>
+                    <td><img  src="Images/Setka.jpg" alt="Сетка"></td>
+                    <td>Защитная сетка</td>
+                    <td>Кальян</td>
+                    <td>Алюминий</td>
+                    <td class="price">500 - 800</td>
+                </tr>
+                <tr>
+                    <td><img  src="Images/Ispar.jpg" alt="Испаритель"></td>
+                    <td>Испаритель</td>
+                    <td>Вейп</td>
+                    <td>Алюминий/медь</td>
+                    <td class="price">800 - 1500</td>
+                </tr>
+                <tr>
+                    <td><img  src="Images/kart.jpg" alt="Картридж"></td>
+                    <td>Картридж</td>
+                    <td>Вейп</td>
+                    <td>Пластик/стекло</td>
+                    <td class="price">500 - 1100</td>
+                </tr>
+                <tr>
+                    <td><img  src="Images/Colb.jpg" alt="Картридж"></td>
+                    <td>Колба</td>
+                    <td>Кальян</td>
+                    <td>Стекло</td>
+                    <td class="price">1500 - 4000</td>
+                </tr>
+             
+             
+            </tbody>
+        </table>
+       
+        
+            
+        </div>
+    </main>
+</body>
+</html>
